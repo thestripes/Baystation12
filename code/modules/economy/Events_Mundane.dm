@@ -75,7 +75,7 @@
 			if(SONG_DEBUT)
 				body += "[pick("Singer","Singer/songwriter","Saxophonist","Pianist","Guitarist","TV personality","Star")] [random_name(pick(MALE,FEMALE))] \
 				announced the debut of their new [pick("single","album","EP","label")] '[pick("Everyone's","Look at the","Baby don't eye those","All of those","Dirty nasty")] \
-				[pick("roses","three stars","starships","nanobots","cyborgs",SPECIES_SKRELL,"Sren'darr")] \
+				[pick("roses","three stars","starships","nanobots","cyborgs",SPECIES_SKRELL,)] \
 				[pick("on Venus","on Reade","on Moghes","in my hand","slip through my fingers","die for you","sing your heart out","fly away")]' \
 				with [pick("pre-puchases available","a release tour","cover signings","a launch concert")] on [affected_dest.name]."
 
@@ -84,7 +84,7 @@
 				[pick("playwright","author","director","actor","TV star")] [random_name(pick(MALE,FEMALE))] comes the latest sensation: '\
 				[pick("Deadly","The last","Lost","Dead")] [pick("Starships","Warriors","outcasts",SPECIES_UNATHI,SPECIES_SKRELL)] \
 				[pick("of","from","raid","go hunting on","visit","ravage","pillage","destroy")] \
-				[pick("Moghes","Earth","the Void","the Edge of Space")]'.\
+				[pick("Moghes","Nyx","Earth","the Void","the Edge of Space","Luna","Gaia","Venus","Pirx","Phobos","Ceres","Pluto","Nueva Castilla","Saffar","Ceti Epsilon","Eos","Theia","Forgotten Colonies","Where Man Forgot")]'. \
 				. Own it on webcast today, or visit the galactic premier on [affected_dest.name]!"
 
 			if(BIG_GAME_HUNTERS)
@@ -94,7 +94,7 @@
 					[pick("a subclass of mammal","an intelligent species of lemur")] turned up. Believed to have been brought in by \
 					[pick("alien smugglers","early colonists","mercenary raiders","unwitting tourists")], this is the first such specimen discovered in the wild."
 				else if(prob(50))
-					body += "were attacked by a vicious [pick("nas'r","diyaab","samak","predator which has not yet been identified")]\
+					body += "were attacked by a vicious [pick("diyaab","samak","predator which has not yet been identified")]\
 					. Officials urge caution, and locals are advised to stock up on armaments."
 				else
 					body += "brought in an unusually [pick("valuable","rare","large","vicious","intelligent")] [pick("mammal","predator","farwa","samak")] for inspection \
