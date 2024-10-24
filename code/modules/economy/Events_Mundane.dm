@@ -11,7 +11,7 @@
 	if(!event_type)
 		return
 
-	var/author = "Nyx Daily"
+	var/author = "The Martian Word"
 	var/channel = author
 
 	//see if our location has custom event info for this event
@@ -20,23 +20,23 @@
 		body = ""
 		switch(event_type)
 			if(RESEARCH_BREAKTHROUGH)
-				body = "A major breakthough in the field of [pick("phoron research","super-compressed materials","nano-augmentation","bluespace research","volatile power manipulation")] \
-				was announced [pick("yesterday","a few days ago","last week","earlier this month")] by a private firm on [affected_dest.name]. \
+				body = "A major breakthough in the field of [pick("alien translation devices","phoron research","super-compressed materials","cybernetic augmentation","bluespace research","volatile power manipulation", "hardsuit development", "industrial alloys", "shipbuilding infrastructure")] \
+				was announced [pick("yesterday","a few days ago","last week","earlier this month", "last fiscal quarter")] by a private firm on [affected_dest.name]. \
 				[GLOB.using_map.company_name] declined to comment as to whether this could impinge on profits."
 
 			if(ELECTION)
-				body = "The pre-selection of an additional candidates was announced for the upcoming [pick("supervisors council","advisory board","governership","board of inquisitors")] \
+				body = "The pre-selection of an additional candidates was announced for the upcoming [pick("supervisors council","advisory board","governership","provincial governance","assembly representative","senate representative")] \
 				election on [affected_dest.name] was announced earlier today, \
-				[pick("media mogul","web celebrity", "industry titan", "superstar", "famed chef", "popular gardener", "ex-army officer", "multi-billionaire")] \
-				[random_name(pick(MALE,FEMALE))]. In a statement to the media they said '[pick("My only goal is to help the [pick("sick","poor","children")]",\
-				"I will maintain my company's record profits","I believe in our future","We must return to our moral core","Just like... chill out dudes")]'."
+				[pick("media mogul","web celebrity", "industry titan", "superstar", "Gaian Conflict veteran", "grassroots activist", "ex-army officer", "multi-billionaire", "sapientarian", "ex-tunneler")] \
+				[random_name(pick(MALE,FEMALE))]. In a statement to the media they said '[pick("My only goal is to help the [pick("sick","poor","children","common people", "moral fibre")]",\
+				"I will maintain my company's record profits - as well as the economy's health","I believe in our future","We must return to our moral core","We should not be divided as a people", "There is no better time for change","I know what the People want")]'."
 
 			if(RESIGNATION)
 				body = "[GLOB.using_map.company_name] regretfully announces the resignation of [pick("Sector Admiral","Division Admiral","Ship Admiral","Vice Admiral")] [random_name(pick(MALE,FEMALE))]."
 				if(prob(25))
 					var/locstring = pick("Segunda","Salusa","Cepheus","Andromeda","Gruis","Corona","Aquila","Asellus") + " " + pick("I","II","III","IV","V","VI","VII","VIII")
 					body += " In a ceremony on [affected_dest.name] this afternoon, they will be awarded the \
-					[pick("Red Star of Sacrifice","Purple Heart of Heroism","Blue Eagle of Loyalty","Green Lion of Ingenuity")] for "
+					[pick("Home Guard medal","Silver Sword","Medal of Honor","Superior Service Cross")] for "
 					if(prob(33))
 						body += "their actions at the Battle of [pick(locstring,"REDACTED")]."
 					else if(prob(50))
