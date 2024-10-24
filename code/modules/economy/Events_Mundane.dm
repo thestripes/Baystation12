@@ -84,14 +84,14 @@
 				[pick("playwright","author","director","actor","TV star")] [random_name(pick(MALE,FEMALE))] comes the latest sensation: '\
 				[pick("Deadly","The last","Lost","Dead")] [pick("Starships","Warriors","outcasts",SPECIES_UNATHI,SPECIES_SKRELL)] \
 				[pick("of","from","raid","go hunting on","visit","ravage","pillage","destroy")] \
-				[pick("Moghes","Earth","Biesel","Ahdomai","S'randarr","the Void","the Edge of Space")]'.\
+				[pick("Moghes","Earth","the Void","the Edge of Space")]'.\
 				. Own it on webcast today, or visit the galactic premier on [affected_dest.name]!"
 
 			if(BIG_GAME_HUNTERS)
 				body += "Game hunters on [affected_dest.name] "
 				if(prob(33))
 					body += "were surprised when an unusual species experts have since identified as \
-					[pick("a subclass of mammal","a divergent abhuman species","an intelligent species of lemur","organic/cyborg hybrids")] turned up. Believed to have been brought in by \
+					[pick("a subclass of mammal","an intelligent species of lemur")] turned up. Believed to have been brought in by \
 					[pick("alien smugglers","early colonists","mercenary raiders","unwitting tourists")], this is the first such specimen discovered in the wild."
 				else if(prob(50))
 					body += "were attacked by a vicious [pick("nas'r","diyaab","samak","predator which has not yet been identified")]\
